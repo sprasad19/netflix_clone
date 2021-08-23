@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.scss';
+// import logo from "./logo.svg";
+import "./App.scss";
+import { Helmet } from "react-helmet";
+import { Route, Switch } from "react-router-dom";
+import Home from "./container/Home/Home";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Helmet titleTemplate="%s - NetFlix" defaultTitle="NetFlix">
+        <meta name="description" content="NetFlix Web Application" />
+      </Helmet>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 }

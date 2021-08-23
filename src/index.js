@@ -8,8 +8,8 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
-import {persistor, store} from "./redux/store";
-
+import { persistor, store } from "./redux/store";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
 if (process.env.NODE_ENV !== "development") {
   console.log = () => {};
@@ -22,7 +22,9 @@ ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <BrowserRouter>
-        <App />
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
       </BrowserRouter>
     </PersistGate>
   </Provider>,
