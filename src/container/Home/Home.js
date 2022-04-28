@@ -5,6 +5,7 @@ export default function Home(props) {
     return (
         <div>
             <Rhelmet title="Home" description="Home Description"  />
+            Hi this is home
         </div>
     )
 }

@@ -6,6 +6,7 @@ import {
   SET_USER_DETAILS,
   SET_USER_DETAILS_ERROR,
   LOGOUT,
+  AUTHENTICATION,
 } from "./constants";
 
 /**
@@ -83,18 +84,36 @@ export function setAccessToken(token) {
 export function setUserName(username) {
   return { type: SET_USER_NAME, username };
 }
+/**
+ * Dispatched when loading the repositories fails
+ *
+ * @param  {boolean} success The error
+ *
+ * @return {object}       An action object with a type of LOAD_REPOS_ERROR passing the error
+ */
+export function setAuthentication(success) {
+  return { type: AUTHENTICATION, success };
+}
 
+/**
+ * Dispatched when loading the repositories fails
+ *
+ *
+ *
+ * @return {object}       An action object with a type of LOAD_REPOS_ERROR passing the error
+ */
+export function setLogout() {
+  return { type: LOGOUT };
+}
 
 
 /**
  * Dispatched when loading the repositories fails
  *
- * 
+ * @param  {boolean} loading The error
  *
  * @return {object}       An action object with a type of LOAD_REPOS_ERROR passing the error
  */
- export function setLogout() {
-  return { type: LOGOUT };
+ export function setLoading(loading) {
+  return { type: AUTHENTICATION, loading };
 }
-
-

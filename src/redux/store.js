@@ -36,7 +36,7 @@ const enhancer =
     : applyMiddleware(sagaMiddleware);
 
 export const store = createStore(rootReducer, initialState, enhancer);
-// sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(rootSaga);
 export const persistor = persistStore(store);
 const ex = { store, persistStore };
 export default ex;

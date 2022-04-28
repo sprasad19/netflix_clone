@@ -12,3 +12,7 @@ export const SET_USER_DETAILS_ERROR = "@global/SET_USER_DETAILS_ERROR";
 export const LOGOUT = "@global/LOGOUT";
 
 
+export const LOGIN = "@global/LOGIN";
+export const SINGUP = "@global/SINGUP";
+export const AUTHENTICATION = "@global/AUTHENTICATION";
+export const SET_LOADING = "@global/SET_LOADING";

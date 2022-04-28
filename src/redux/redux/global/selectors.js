@@ -17,8 +17,6 @@ export {
   selectGlobalDomain,
   makeSelectError,
   makeSelectLoading,
-  // makeSelectSideBar,
-  // makeSelectDeviceDimension,
   makeSelectUserName,
   makeSelectErrorMessage,
   makeSelectAccessToken,
